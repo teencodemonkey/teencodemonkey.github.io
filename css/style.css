@@ -42,9 +42,8 @@ li a:not(#title) {
     margin-top: 100px;
 }
 
-#container {
+#content {
     margin-left:20%;
     padding:1px 16px;
-    height:1000px;
     text-align: center;
 }
