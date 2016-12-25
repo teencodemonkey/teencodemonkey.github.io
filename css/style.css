@@ -6,9 +6,10 @@ ul {
     background-color: white;
     position: fixed;
     height: 100%;
-    overflow: auto;
-    box-shadow:inset 0px 0px 20px 0px rgba(0,0,0,0.2);
+    overflow: hidden;
+    box-shadow:inset 0px 0px 20px 0px rgba(0,0,0,0.1);
     text-align: center;
+    border: 1px solid #e7e7e7;
 }
 
 li a {
@@ -24,7 +25,6 @@ li a {
     border-right: 3px solid #23527c;
 }
 
-
 .active:hover, #title:hover {
     color: black;
 }
@@ -35,10 +35,16 @@ li a:hover:not(.active):not(#title) {
 }
 
 li a:not(#title) {
-    font-size: larger;
-    
+    font-size: larger; 
 }
 
-#links {
-    margin-top: 300px;
+#links, #face {
+    margin-top: 100px;
+}
+
+#container {
+    margin-left:20%;
+    padding:1px 16px;
+    height:1000px;
+    text-align: center;
 }
