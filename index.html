@@ -13,25 +13,27 @@
         <div id="navbar">
             <ul>
                 <li>
-                    <h2><a id="title" href="/">Yash Patel</a></h2>
+                    <h2><a id="title" href="/" >Yash Patel</a></h2>
                 </li>
                 <hr>
-                <p>A 14 year old Code Monkey.</p>
+                
                 <img src="/css/face.png" id="face">
+                <h4>A 14 year old Code Monkey.</h4>
                 <div id="links">
                     <hr>
-                    <li><a href="" ng-click="showHome()" ng-class="{active: isActive('home.html')}">Home</a></li>
-                    <li><a href="" ng-click="showAbout()" ng-class="{active: isActive('about.html')}">About Me</a></li>
-                    <li><a href="" ng-click="showProjects()" ng-class="{active: isActive('projects.html')}">My Projects</a></li>
+                    <li><a href="" ng-click="showHome()" ng-class="{active: isActive('/')}">Home</a></li>
+                    <li><a href="" ng-click="showProjects()" ng-class="{active: isActive('projects')}">My Projects</a></li>
+                    <li><a href="" ng-click="showAbout()" ng-class="{active: isActive('about')}">About Me</a></li>
                     <hr>
                 </div>
             </ul>
         </div>
-        <div id="content" ng-include="templateURL">
+        <div id="content" ng-view>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+    <script src="//code.angularjs.org/snapshot/angular.js"></script>
+    <script src="//code.angularjs.org/snapshot/angular-route.js"></script>
     <script src="/js/main.js"></script>
 </body>
 

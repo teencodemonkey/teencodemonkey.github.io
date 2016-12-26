@@ -1,22 +1,36 @@
-var app = angular.module('blogPage', []);
+var app = angular.module('blogPage', ['ngRoute']);
 
-app.controller('linkController', ['$scope', function ($scope) {
+app.config(function($routeProvider, $locationProvider) {
+  $routeProvider
+   .when('/', {
+    templateUrl: 'home.html',
+    activetab: '/'
+  })
+  .when('/about', {
+    templateUrl: 'about.html',
+    activetab: 'about'
+  })
+  .when('/projects', {
+    templateUrl: 'projects.html',
+    activetab: 'projects'
+  });
+});
 
-    $scope.templateURL = 'home.html';
+
+app.controller('linkController', ['$scope','$location','$route',function ($scope,$location,$route) {
 
     $scope.showHome = function () {
-        $scope.templateURL = 'home.html';
+        $location.path('/');
     };
     $scope.showAbout = function () {
-        $scope.templateURL = 'about.html';
+        $location.path('about');
     };
     $scope.showProjects = function () {
-        $scope.templateURL = 'projects.html';
+        $location.path('projects');
     };
 
-    $scope.isActive = function(route) {
-        return route === $scope.templateURL;
+    $scope.isActive = function (route){
+        return route == $route.current.activetab;
     };
-
 
 }]);
