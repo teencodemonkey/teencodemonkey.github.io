@@ -2,11 +2,17 @@
 <html>
 
 <head>
+    <meta charset="utf-8">
+
     <title>The Teen Code Monkey</title>
+
+    <link rel="favicon" type="image/png" href="/css/icon.png" />
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="css/prism.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="favicon" type="image/png" href="/css/icon.png" />
+    
+    <base href="/">
 </head>
 
 <body ng-app="blogPage">
@@ -21,9 +27,9 @@
                 <h4>A 14 year old Code Monkey.</h4>
                 <div id="links">
                     <hr>
-                    <li><a href="#/" ng-class="{active: isActive('/')}">Home</a></li>
-                    <li><a href="#/projects" ng-class="{active: isActive('projects')}">My Projects</a></li>
-                    <li><a href="#/about" ng-class="{active: isActive('about')}">About Me</a></li>
+                    <li><a href="/" ng-class="{active: isActive('/')}">Home</a></li>
+                    <li><a href="/projects" ng-class="{active: isActive('projects')}">My Projects</a></li>
+                    <li><a href="/about" ng-class="{active: isActive('about')}">About Me</a></li>
                     <hr>
                 </div>
             </ul>

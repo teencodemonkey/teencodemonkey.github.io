@@ -15,12 +15,14 @@ app.config(function ($routeProvider, $locationProvider) {
             templateUrl: 'projects.html',
             activetab: 'projects'
         })
+        
+        $locationProvider.html5Mode(true);
         $locationProvider.hashPrefix("");
 });
 
 
 app.controller('linkController', ['$scope', '$location', '$route', function ($scope, $location, $route) {
-    
+
     $scope.isActive = function (route) {
         return route == $route.current.activetab;
     };
