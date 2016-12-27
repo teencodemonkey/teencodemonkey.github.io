@@ -19,7 +19,7 @@ app.config(function ($routeProvider, $locationProvider) {
             redirectTo: '/'
         });
 
-        $locationProvider.hashPrefix('');
+        $locationProvider.html5Mode(true, false);
 });
 
 
