@@ -4,19 +4,22 @@ var app = angular.module('blogPage', ['ngRoute']);
 app.config(function ($routeProvider, $locationProvider) {
     $routeProvider
         .when('/', {
-            templateUrl: 'home.html',
+            templateUrl: '/templates/home.html',
             activetab: '/'
         })
         .when('/about', {
-            templateUrl: 'about.html',
+            templateUrl: '/templates/about.html',
             activetab: 'about'
         })
         .when('/projects', {
-            templateUrl: 'projects.html',
+            templateUrl: '/templates/projects.html',
             activetab: 'projects'
         })
-        
-        $locationProvider.html5Mode(true);
+        .otherwise({
+            redirectTo: '/'
+        });
+
+        $locationProvider.hashPrefix('');
 });
 
 
@@ -29,5 +32,6 @@ app.controller('linkController', ['$scope', '$location', '$route', function ($sc
     $scope.$on('$viewContentLoaded', function(){
         Prism.highlightAll();
     });
+
 
 }]);
