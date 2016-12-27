@@ -21,19 +21,20 @@
                 <h4>A 14 year old Code Monkey.</h4>
                 <div id="links">
                     <hr>
-                    <li><a href="" ng-click="showHome()" ng-class="{active: isActive('/')}">Home</a></li>
-                    <li><a href="" ng-click="showProjects()" ng-class="{active: isActive('projects')}">My Projects</a></li>
-                    <li><a href="" ng-click="showAbout()" ng-class="{active: isActive('about')}">About Me</a></li>
+                    <li><a href="#/" ng-class="{active: isActive('/')}">Home</a></li>
+                    <li><a href="#/projects" ng-class="{active: isActive('projects')}">My Projects</a></li>
+                    <li><a href="#/about" ng-class="{active: isActive('about')}">About Me</a></li>
                     <hr>
                 </div>
             </ul>
         </div>
-        <div id="content" ng-view>
+        <div id="content">
+            <ng-view></ng-view>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
-    <script src="//code.angularjs.org/snapshot/angular.js"></script>
-    <script src="//code.angularjs.org/snapshot/angular-route.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-route.min.js"></script>
     <script src="js/prism.js"></script>
     <script src="/js/main.js"></script>
 </body>

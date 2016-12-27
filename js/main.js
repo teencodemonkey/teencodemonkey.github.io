@@ -14,22 +14,13 @@ app.config(function ($routeProvider, $locationProvider) {
         .when('/projects', {
             templateUrl: 'projects.html',
             activetab: 'projects'
-        });
+        })
+        $locationProvider.hashPrefix("");
 });
 
 
 app.controller('linkController', ['$scope', '$location', '$route', function ($scope, $location, $route) {
-
-    $scope.showHome = function () {
-        $location.path('/');
-    };
-    $scope.showAbout = function () {
-        $location.path('about');
-    };
-    $scope.showProjects = function () {
-        $location.path('projects');
-    };
-
+    
     $scope.isActive = function (route) {
         return route == $route.current.activetab;
     };
@@ -37,5 +28,5 @@ app.controller('linkController', ['$scope', '$location', '$route', function ($sc
     $scope.$on('$viewContentLoaded', function(){
         Prism.highlightAll();
     });
-    
+
 }]);
